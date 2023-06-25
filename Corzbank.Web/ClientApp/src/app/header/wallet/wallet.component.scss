@@ -1,0 +1,581 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wallet {
+    display: grid;
+    grid-auto-rows: 100px;
+    margin: 50px 0;
+    grid-gap: 60px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+
+    .cards-deposits,
+    .details {
+        background-color: #2b273f;
+        height: fit-content;
+        width: 340px;
+
+        .option {
+            width: 100%;
+            text-align: start;
+            display: flex;
+            background-color: #2c2744;
+
+            &:hover {
+                background-color: #1e1b2e;
+                cursor: pointer;
+                transition: 1s;
+            }
+
+            h2 {
+                padding: 13px 35px 13px;
+                font-size: 24px;
+                color: #9f9f9f;
+                margin: 0;
+            }
+
+            hr {
+                height: 2px;
+                background-color: #919191;
+            }
+
+            .selected-option {
+                border-left: 5px solid green;
+                height: 62px;
+            }
+
+            .option-title {
+                width: 100%;
+            }
+        }
+
+        .show-cards-title {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.cards {
+    .credit {
+        background-color: #979191;
+    }
+
+    .debit {
+        background-color: #86ae86;
+    }
+
+    .universal {
+        background-color: #7c85a2;
+    }
+
+    .card {
+        width: 320px;
+        height: 175px;
+        border-radius: 10px;
+        font-weight: 700;
+        font-size: 15px;
+        display: flex;
+        justify-content: space-between;
+        margin: 35px 10px;
+        padding: 10px 15px 20px;
+        transition: 0.5s;
+
+        &:hover {
+            background: radial-gradient(#7c859194, #663d3d00);
+            cursor: pointer;
+        }
+
+        .card-field {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .title {
+            display: flex;
+        }
+
+        small {
+            padding: 0 3px;
+        }
+
+        .card-type {
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        .card-number {
+            font-size: 18px;
+            letter-spacing: 2px;
+        }
+
+        .payment-system {
+            color: #424242;
+            letter-spacing: 1px;
+            font-family: cursive;
+        }
+
+        .expiration-date {
+            font-weight: 500;
+        }
+
+        .balance {
+            font-family: cursive;
+            font-size: 20px;
+        }
+    }
+
+    .submit-button {
+        justify-content: center;
+        margin: 10px;
+
+        button {
+            background: #414664;
+            color: #b7b5b5;
+
+            &:hover {
+                background-color: #34354f;
+            }
+        }
+    }
+}
+
+.deposits-block {
+    .deposits {
+        max-height: 364px;
+        overflow: auto;
+        width: 340px;
+
+        .deposit {
+            background-color: #b9bcba;
+            margin: 20px;
+            padding: 10px;
+            transition: .5s;
+            border-radius: 10px;
+
+            &:hover {
+                background: radial-gradient(#b9bcba, #ffffff69);
+                cursor: pointer;
+            }
+
+            .deposit-title {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            h4 {
+                margin: 0;
+                text-align: end;
+            }
+        }
+    }
+
+    .submit-button {
+        justify-content: center;
+        padding: 10px;
+
+        button {
+            background: #4b4d58;
+            color: #b7b5b5;
+
+            &:hover {
+                background-color: #575757;
+            }
+
+            &:hover[disabled] {
+                background-color: #4b4d58;
+                cursor: auto;
+            }
+        }
+    }
+}
+
+.details-card-block {
+    width: 100%;
+
+    .details {
+        width: 100%;
+        background-color: #2b273f;
+        color: #cecece;
+
+        .option-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #021d01;
+
+            .icon {
+                border-radius: 7px;
+                height: 35px;
+                width: 35px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 17px;
+                background: white;
+                cursor: pointer;
+                color: #837777;
+
+                &:hover {
+                    background-color: #bdbdbd;
+                }
+            }
+
+            .functions {
+                display: flex;
+            }
+        }
+
+        .card-data {
+            display: flex;
+
+            .main-data,
+            .balance {
+                margin-right: 90px;
+                padding: 20px 0 0 20px;
+            }
+
+            .main-data {
+                width: 282px;
+
+                .card-number,
+                .cvv {
+                    display: flex;
+                    border-radius: 20px;
+                    transition: 0.5s;
+
+                    &:hover {
+                        background-color: #2e2a43;
+                    }
+                }
+            }
+
+            span {
+                padding: 10px;
+                font-size: 19px;
+            }
+
+            .date-cvv {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 10px;
+            }
+
+            .expiration-date {
+                font-size: 16px;
+            }
+
+            .balance h2,
+            .expiration-date {
+                color: #9c9c9c;
+            }
+
+            .cvv,
+            .card-number {
+                cursor: pointer;
+                letter-spacing: 3px;
+            }
+        }
+    }
+}
+
+.title-transactions {
+    display: flex;
+    margin-top: 30px;
+    background-color: #1a1728;
+
+    h2 {
+        padding: 13px 35px 13px;
+        font-size: 24px;
+        color: #9f9f9f;
+        margin: 0;
+    }
+}
+
+.transactions {
+    overflow: auto;
+    max-height: 305px;
+    background-color: #2b273f;
+
+
+    .transaction {
+        display: flex;
+        padding: 15px 30px;
+        background: #2b2838;
+        color: #c4c4c4;
+        align-items: center;
+        margin: 10px 0;
+
+        .transfer-field {
+            display: flex;
+        }
+
+        .icon {
+            width: 10%;
+
+            &:before {
+                background: red;
+                padding: 5px;
+                border-radius: 50px;
+            }
+        }
+
+        .description {
+            width: 70%;
+        }
+
+        .price {
+            width: 20%;
+            display: flex;
+            justify-content: end;
+        }
+    }
+}
+
+.transfer {
+    background-color: #2b273f;
+    height: fit-content;
+    padding: 10px;
+
+    small {
+        margin: 3px 50px;
+        color: red;
+        font-size: 18px;
+    }
+
+    .form-control.ng-touched.ng-valid {
+        border-color: green;
+    }
+
+    .form-control.ng-touched.ng-invalid {
+        border-color: red;
+    }
+
+    .field {
+        display: flex;
+        flex-direction: column;
+        margin: 5px 0;
+        height: 76px;
+
+        input {
+            padding: 0 20px;
+            letter-spacing: 2px;
+        }
+    }
+}
+
+.submit-button {
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+        width: 152px;
+        height: 36px;
+        font-size: 22px;
+        font-weight: 500;
+        border: none;
+        outline: none;
+        border-radius: 8px;
+        background: #21cf0c;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #8eb976;
+        }
+
+        &:hover[disabled] {
+            background-color: #21cf0c;
+            cursor: auto;
+        }
+    }
+}
+
+.settings {
+    background-color: grey;
+}
+
+.open-card-menu-block,
+.open-deposit-menu-block {
+    width: 100%;
+
+    .title-open-card-menu,
+    .title-open-deposit-menu {
+        margin: 0;
+    }
+
+    .open-card-menu,
+    .open-deposit-menu {
+        background-color: #2b273f;
+
+        .field {
+            display: flex;
+            height: 60px;
+            margin-bottom: 20px;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 0;
+
+            .payment-system,
+            .card-type,
+            .secret-word,
+            .amount,
+            .card {
+                display: flex;
+                justify-content: space-between;
+                width: 80%;
+                flex-direction: initial;
+            }
+
+            select {
+                height: fit-content;
+            }
+
+            small {
+                margin: 3px 50px;
+                color: red;
+                font-size: 14px;
+                align-self: start;
+            }
+
+            span {
+                font-size: 20px;
+                font-weight: 500;
+                color: #9f9f9f;
+            }
+
+            .card {
+                background: none;
+                align-items: center;
+                border: none;
+            }
+        }
+
+        .submit-button {
+            justify-content: center;
+            padding: 10px;
+
+            button {
+                background: #4b4d58;
+                color: #b7b5b5;
+
+                &:hover {
+                    background-color: #575757;
+                }
+
+                &:hover[disabled] {
+                    background-color: #4b4d58;
+                    cursor: auto;
+                }
+            }
+        }
+
+        .duration {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+
+            span {
+                font-size: 20px;
+                font-weight: 500;
+                color: #9f9f9f;
+            }
+
+            label {
+                background: #54818b;
+                margin: 20px 0;
+                font-size: 20px;
+                font-weight: 500;
+                padding: 4px;
+
+                button {
+                    font-size: 20px;
+                    font-weight: 700;
+                    background: #5e858d;
+                    outline: none;
+                    border: none;
+                    cursor: pointer;
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+}
+
+.empty-wallet {
+    color: rgb(150, 149, 149);
+}
+
+.details-deposit-block {
+    width: 100%;
+
+    .details {
+        width: 100%;
+        background-color: #2b273f;
+        color: #cecece;
+
+        .option-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #021d01;
+        }
+
+        .deposit-data {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 15px;
+
+
+            .main-data,
+            .date {
+                display: flex;
+                flex-direction: column;
+
+                span {
+                    padding: 10px;
+                }
+            }
+
+            .main-data {
+                align-items: start;
+            }
+
+            .date {
+                align-items: end;
+            }
+
+            .close-btn {
+                padding: 10px;
+
+                button {
+                    background-color: red;
+                    width: 125px;
+                    height: 29px;
+                    font-size: 17px;
+                    border: none;
+                    outline: none;
+                    border-radius: 8px;
+                    transition: 1s;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #9c1d1d;
+                        transition: 1s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+::ng-deep.mat-dialog-container {
+    overflow: hidden !important;
+}
+
+::ng-deep.mat-dialog-actions {
+    padding: 0 !important;
+}

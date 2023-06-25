@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NETCore.MailKit" Version="2.1.0" />
+    <PackageReference Include="NLog" Version="5.0.0" />
+    <PackageReference Include="SendGrid" Version="9.28.0" />
+    <PackageReference Include="Twilio" Version="5.75.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Corzbank.Data.Entities\Corzbank.Data.Models.csproj" />
+    <ProjectReference Include="..\Corzbank.Data\Corzbank.Data.csproj" />
+    <ProjectReference Include="..\Corzbank.Helpers\Corzbank.Helpers.csproj" />
+    <ProjectReference Include="..\Corzbank.Repositories\Corzbank.Repositories.csproj" />
+  </ItemGroup>
+
+</Project>
